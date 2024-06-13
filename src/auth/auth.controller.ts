@@ -15,11 +15,8 @@ export class AuthController{
         @Body() dto: AuthDto
     ){
         console.log({
-            email, 
-            typeOfEmail: typeof email,
-            password,
-            typeOfPassword: typeof password,
-        });
+            dto,
+        })
         return this.authService.signup();
     }
 
